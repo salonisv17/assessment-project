@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>MAKEUP PRODUCTS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="makeup.css">
+    </head>
+    <body>
+        
+        <section id="user-info">
+                <div class="nav-bar">
+                    <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">GLAM YOURSELF WITH SALONI VERMA</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                              <ul class="navbar-nav ml-auto">
+                                <li class="nav-item ">
+                                  <a class="nav-link" href="#">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#" >MY EXPERIENCES</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#">CONTACT</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                </div>
+        </section>
+        <section>
+                <div class="container" id="hello">
+                        <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="please type your language" aria-label="Search" id="sayHello">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="sayHelloz()">SAY HELLO</button>
+                              </form>
+                </div>
+                </section>
+                <!----login page-->
+                <section id="sign-up">
+                    <div class="container login-page login">
+                        
+                        <h3 id="heading">SIGN UP YOURSELF TO HAVE A LOOK THROUGH THE APP</h3>
+                        <img src="images (1).jfif" id="changeimg" height="150px" width="150px" style="border: 5px;"><br>
+                        NAME:<br><input class="name n" type="text" VALUE="NAME" placeholder="ENTER YOUR NAME"><br>
+                        PASSWORD:<br><input class="name" type="password" value="pswrd"><br>
+                        <button type="submit" ><a href="makeup2.html">submit</a></button>
+                        <button id="justforfun">click on me, just for fun</button>
+                        <hr>OR LOGIN USING GOOGLE <br>
+                        <button><img src="download.png" href="www.google.com"> </button>
+                    </div>
+                    </section>
+
+
+<script>
+    function sayHelloz()
+{
+    var str=document.getElementById("sayHello");
+  if(str.length==0)
+  {
+     document.getElementById("sayHello").innerHTML="";
+     return;
+  } 
+   else
+ {
+    var xmlhttp=new XMLHttpRequest();
+     xmlhttp.onreadystatechange=function(){
+      if(this.readyState==4 && this.status==200)
+       {
+         document.getElementById("hello").innerHTML=this.responseText;
+         var obj=JSON.parse(this.responseText);
+         //console.log(obj);
+         var res=" ";
+        res=res+"<p>"+obj.hello+"</p>"
+          document.getElementById("hello").innerHTML=res;
+          //document.getElementById("container").innerHTML=image;
+      }
+     };
+     xmlhttp.open("GET", "https://fourtonfish.com/hellosalut/?lang="+str, true);
+     xmlhttp.send();
+   }
+ }
+</script>
+<script>
+    $(document).ready(function()
+    {
+        $('#justforfun').click(function()
+        {
+            const a=$('.n').val();
+            $('#changeimg').attr('src',`https://joeschmoe.io/api/v1/${a}`);
+        })
+    })
+</script>
+          </body>
+</html>
