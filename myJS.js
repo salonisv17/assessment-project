@@ -20,7 +20,7 @@
          
      }
     };
-    xmlhttp.open("GET", "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush", true);
+    xmlhttp.open("GET", "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush", true);
     xmlhttp.send();   
  }
  function eyelinerFunc()
@@ -41,7 +41,7 @@
          
      }
     };
-    xmlhttp.open("GET", "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner", true);
+    xmlhttp.open("GET", "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner", true);
     xmlhttp.send();   
  }
  function eyeshadowFunc()
