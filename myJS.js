@@ -61,7 +61,7 @@
          
      }
     };
-    xmlhttp.open("GET", "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow", true);
+    xmlhttp.open("GET", "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow", true);
     xmlhttp.send();   
  }
  function foundationFunc()
@@ -81,6 +81,6 @@
          
      }
     };
-    xmlhttp.open("GET", "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation", true);
+    xmlhttp.open("GET", "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation", true);
     xmlhttp.send();   
  }
